@@ -63,7 +63,14 @@ class EnglishBigin:
         text_surface_obj = font.render(self.answer[self.i], True, (255, 255, 255), (0, 0, 0))
         text_rect_obj = text_surface_obj.get_rect()
         text_rect_obj.center = (500, 150)
-        self.screen.blit(text_surface_obj,text_rect_obj)
+        self.screen.blit(text_surface_obj, text_rect_obj)
+
+    def __draw_index(self):
+        font = pygame.font.Font('GB2312.ttf', 20)
+        text_surface_obj = font.render(str(self.i + 1), True, (255, 255, 255), (0, 0, 0))
+        text_rect_obj = text_surface_obj.get_rect()
+        text_rect_obj.center = (50, 50)
+        self.screen.blit(text_surface_obj, text_rect_obj)
 
     def main(self):
         while True:
@@ -75,7 +82,7 @@ class EnglishBigin:
                         self.show_answer = True
                     elif event.key == pygame.K_RIGHT:
                         self.show_answer = False
-                        if self.i < len(self.image_list)-1:
+                        if self.i < len(self.image_list) - 1:
                             self.i += 1
                     elif event.key == pygame.K_LEFT:
                         self.show_answer = False
@@ -84,6 +91,7 @@ class EnglishBigin:
             self.__draw_background()
             if self.show_answer is True:
                 self.__draw_answer()
+            self.__draw_index()
             pygame.display.update()
             self.fclock.tick(300)
 
