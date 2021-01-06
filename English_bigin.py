@@ -1,9 +1,6 @@
 import pygame
 import sys
 import pygame.freetype
-import requests
-import json
-import time
 import os
 import cv2
 import numpy as np
@@ -79,7 +76,10 @@ class EnglishBigin:
                     sys.exit()
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_SPACE:
-                        self.show_answer = True
+                        if self.show_answer == False:
+                            self.show_answer = True
+                        else:
+                            self.show_answer = False
                     elif event.key == pygame.K_RIGHT:
                         self.show_answer = False
                         if self.i < len(self.image_list) - 1:
