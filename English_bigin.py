@@ -105,4 +105,5 @@ if __name__ == '__main__':
     # for item in a:
     #     print(item)
     #     process_image('images/' + item)
-    # process_image('images/19.png')
+    # process_image('images/33.png')
+    # process_image('images/34.png')
