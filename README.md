@@ -1,6 +1,6 @@
 # English Bigin
 
-by: coronaPolvo
+by: coronaPolvo,ZeroRains
 
 刷英语听力的神器
 
@@ -21,4 +21,8 @@ by: coronaPolvo
 显示答案：
 
 <img src="README.assets/image-20210105211317959.png" style="zoom:50%;" />
+
+添加了判断题刷题工具：
+TrueFalse_bigin.py
+直接运行就行，没有导入奇怪的包
 
